@@ -1,10 +1,9 @@
 let arrPage = [
     'regis-section',
-    'login-section',
-    'main-section'
+    'login-section'
 ]
 
-let musicDB = []
+
 
 let userDB = []
 
@@ -23,7 +22,7 @@ function showPage(page) {
 
 function handlingRegis() {
     let inputUser = document.getElementById("input-regis-username").value;
-    console.log(inputUser);
+    // console.log(inputUser);
     let inputPassword = document.getElementById("input-regis-password").value;
     if (!inputUser || !inputPassword) {
         alert("username / password is invalid");
@@ -35,17 +34,27 @@ function handlingRegis() {
         let found = false;
         for (let i = 0; i < userDB.length; i++) {
           let perUser = userDB[i];
-          if (perUser.username === inputUser) {
+          if (perUser.user === inputUser) {
             found = true;
             break;
           }
         }
-
-        let newUser = {
-            user : inputUser,
-            password : inputPassword
+        if(found){
+            console.log('msk');
+            alert("username telah terdaftar");
+            document.getElementById("input-regis-username").value = "";
+            document.getElementById("input-regis-password").value = "";
+            showPage("regis-section")
+        } else {
+            let newUser = {
+                user : inputUser,
+                password : inputPassword
+            }
+            userDB.push(newUser)
+            document.getElementById("input-regis-username").value = "";
+            document.getElementById("input-regis-password").value = "";
+            showPage("regis-section")
         }
-        userDB.push(newUser)
     }
 }
 
@@ -62,5 +71,15 @@ function handlingLogin() {
         showPage("login-section")
     } else {
         let isLogin = false;
+        for(let i in userDB){
+            let perUser = userDB[i];
+            if(perUser.user === inputUser && perUser.password === inputPassword){
+                isLogin = true
+            }
+        }
+        if(isLogin){
+            localStorage.setItem("user", inputUser);
+            d
+        }
     }
 }
