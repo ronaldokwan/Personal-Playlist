@@ -12,14 +12,15 @@
 </head>
 
 <body>
-  <section id="login-section">
-    <div class="wrapper">
-      <form action="">
-        <h1>Login</h1>
-        <div class="input-box">
-          <input type="text" placeholder="Username" id="input-username" maxlength="10">
-          <i class='bx bxs-user'></i>
-        </div>
+    <div class="container">
+    <section id="login-section">
+        <div class="wrapper">
+            <form action="">
+                <h1>Login</h1>
+                <div class="input-box">
+                    <input type="text" placeholder="Username" id="input-username" maxlength="10">
+                    <i class='bx bxs-user'></i>
+                </div>
 
         <div class="input-box">
           <input type="password" placeholder="Password" id="input-password" required>
@@ -54,18 +55,13 @@
           <i class='bx bxs-lock-alt'></i>
         </div>
 
-        <button type="submit" class="btn" onclick="handlingRegis()">Register</button>
-      </form>
+                <button type="submit" class="btn" onclick="handlingRegis()">Register</button>
+            </form>
+        </div>
+    </section>
+    
+    <script src="login.js"></script>
     </div>
-  </section>
-  <section id="main">
-    <div class="container">
-      <h1>Personal Playlist</h1>
-
-    </div>
-  </section>
-  <script src="login.js"></script>
-  <script src="index.js"></script>
 </body>
 
 </html>
