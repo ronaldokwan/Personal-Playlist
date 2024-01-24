@@ -1,19 +1,63 @@
+<!-- write your code here -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="styleLogin.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
-  <section id="main">
-    <h1>Personal Playlist</h1>
+    <section id="login-section">
+        <div class="wrapper">
+            <form action="">
+                <h1>Login</h1>
+                <div class="input-box">
+                    <input type="text" placeholder="Username" id="input-username" maxlength="10">
+                    <i class='bx bxs-user'></i>
+                </div>
 
-  </section>
-  <script src="index.js"></script>
+                <div class="input-box">
+                    <input type="password" placeholder="Password" id="input-password" required>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> Remember me</label>
+                    <a href="#">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="btn" onclick="handlingLogin()">Login</button>
+
+                <div class="register-link">
+                    <p>Don't have an account? <a href="#" onclick="showPage('regis-section')">Register</a></p>
+                </div>
+            </form>
+        </div>
+    </section>
+        
+    <section id="regis-section" style="display: none;">
+        <div class="wrapper">
+            <form action="">
+                <h1>Register</h1>
+                <div class="input-box">
+                    <input type="text" placeholder="Username" id="input-regis-username" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+
+                <div class="input-box">
+                    <input type="password" placeholder="Password" id="input-regis-password" required>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+
+                <button type="submit" class="btn" onclick="handlingRegis()">Register</button>
+            </form>
+        </div>
+    </section>
+    
+    <script src="login.js"></script>
 </body>
 
 </html>
