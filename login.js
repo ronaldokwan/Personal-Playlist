@@ -1,6 +1,6 @@
 let arrPage = [
     'regis-section',
-    'login-section'
+    'login-section',
 ]
 
 
@@ -9,6 +9,7 @@ let userDB = []
 
 
 function showPage(page) {
+    // console.log("====");
     for(let i = 0; i < arrPage.length; i++){
         let perPage = arrPage[i];
         if(perPage === page){
@@ -40,7 +41,7 @@ function handlingRegis() {
           }
         }
         if(found){
-            console.log('msk');
+            // console.log('msk');
             alert("username telah terdaftar");
             document.getElementById("input-regis-username").value = "";
             document.getElementById("input-regis-password").value = "";
@@ -53,7 +54,8 @@ function handlingRegis() {
             userDB.push(newUser)
             document.getElementById("input-regis-username").value = "";
             document.getElementById("input-regis-password").value = "";
-            showPage("regis-section")
+            showPage("login-section")
+            Swal.fire("Registrasi Berhasil!");
         }
     }
 }
@@ -79,7 +81,20 @@ function handlingLogin() {
         }
         if(isLogin){
             localStorage.setItem("user", inputUser);
-            d
+            document.getElementById("input-username").value = "";
+            document.getElementById("input-password").value = "";
+            // showPage("main-section")
+            // console.log(document.location);
+            window.location.href = "main.html"
+            // console.log("===");
+
+        } else {
+            alert("username / password yang anda masukan salah");
+            document.getElementById("input-username").value = "";
+            document.getElementById("input-password").value = "";
+            load();
         }
     }
 }
+
+

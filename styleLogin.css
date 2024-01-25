@@ -99,6 +99,14 @@ body {
     font-weight: 600;
 }
 
+.login-regis-btn {
+    width: 100%;
+}
+
+.wrapper button:hover{
+    text-decoration: underline;
+}
+
 .register-link {
     font-size: 15px;
     text-align: center;
@@ -113,4 +121,10 @@ body {
 
 .register-link p a:hover {
     text-decoration: underline;
+}
+
+#tulisan-jambu {
+    color: aliceblue;
+    text-align: center;
+    font-size: larger;
 }
