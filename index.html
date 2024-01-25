@@ -12,56 +12,56 @@
 </head>
 
 <body>
-    <div class="container">
+  <div class="container">
     <section id="login-section">
-        <div class="wrapper">
-            <form action="">
-                <h1>Login</h1>
-                <div class="input-box">
-                    <input type="text" placeholder="Username" id="input-username" maxlength="10">
-                    <i class='bx bxs-user'></i>
-                </div>
+      <div class="wrapper">
+        <form action="">
+          <h1>Login</h1>
+          <div class="input-box">
+            <input type="text" placeholder="Username" id="input-username" maxlength="10">
+            <i class='bx bxs-user'></i>
+          </div>
 
-        <div class="input-box">
-          <input type="password" placeholder="Password" id="input-password" required>
-          <i class='bx bxs-lock-alt'></i>
-        </div>
+          <div class="input-box">
+            <input type="password" placeholder="Password" id="input-password" required>
+            <i class='bx bxs-lock-alt'></i>
+          </div>
 
-        <div class="remember-forgot">
-          <label><input type="checkbox"> Remember me</label>
-          <a href="#">Forgot password?</a>
-        </div>
+          <div class="remember-forgot">
+            <label><input type="checkbox"> Remember me</label>
+            <a href="#">Forgot password?</a>
+          </div>
 
-        <button type="submit" class="btn" onclick="handlingLogin()">Login</button>
+          <button type="submit" class="btn" onclick="handlingLogin()">Login</button>
 
-        <div class="register-link">
-          <p>Don't have an account? <a href="#" onclick="showPage('regis-section')">Register</a></p>
-        </div>
-      </form>
-    </div>
-  </section>
-
-  <section id="regis-section" style="display: none;">
-    <div class="wrapper">
-      <form action="">
-        <h1>Register</h1>
-        <div class="input-box">
-          <input type="text" placeholder="Username" id="input-regis-username" required>
-          <i class='bx bxs-user'></i>
-        </div>
-
-        <div class="input-box">
-          <input type="password" placeholder="Password" id="input-regis-password" required>
-          <i class='bx bxs-lock-alt'></i>
-        </div>
-
-                <button type="submit" class="btn" onclick="handlingRegis()">Register</button>
-            </form>
-        </div>
+          <div class="register-link">
+            <p>Don't have an account? <a href="#" onclick="showPage('regis-section')">Register</a></p>
+          </div>
+        </form>
+      </div>
     </section>
-    
+
+    <section id="regis-section" style="display: none;">
+      <div class="wrapper">
+        <form action="">
+          <h1>Register</h1>
+          <div class="input-box">
+            <input type="text" placeholder="Username" id="input-regis-username" required>
+            <i class='bx bxs-user'></i>
+          </div>
+
+          <div class="input-box">
+            <input type="password" placeholder="Password" id="input-regis-password" required>
+            <i class='bx bxs-lock-alt'></i>
+          </div>
+
+          <button type="submit" class="btn" onclick="handlingRegis()">Register</button>
+        </form>
+      </div>
+    </section>
+
     <script src="login.js"></script>
-    </div>
+  </div>
 </body>
 
 </html>
